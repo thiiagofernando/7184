@@ -33,8 +33,7 @@ class _HomePageState extends State<HomePage> {
     if (newTaskCtrl.text.isEmpty) return;
     setState(() {
       widget.items.add(
-        Item(
-            title: newTaskCtrl.text, done: false, dateregister: dateFormat()),
+        Item(title: newTaskCtrl.text, done: false, dateregister: dateFormat()),
       );
       newTaskCtrl.text = "";
       save();
@@ -43,9 +42,13 @@ class _HomePageState extends State<HomePage> {
 
   String dateFormat() {
     var now = new DateTime.now();
-    var formatter = new DateFormat('dd-MM-yyyy HH:mm:ss');
-    String formatted = formatter.format(now);
-    return formatted;
+    var formatterHora = new DateFormat('HH:mm:ss');
+    var formatterData = new DateFormat('dd/MM/yyyy');
+
+    String formattedHora = formatterHora.format(now);
+    String formattedData = formatterData.format(now);
+    String dataCompleta = formattedData + ' as ' + formattedHora;
+    return dataCompleta;
   }
 
   void remove(int index) {
