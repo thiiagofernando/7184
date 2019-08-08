@@ -16,4 +16,4 @@ For help getting started with Flutter, view our
 samples, guidance on mobile development, and a full API reference.
 
 todoList em Flutter para Adicionar Lista de Tarefas com data de criação da Tarefa
-e informar e a tarefa foi feita ou não
+e informar se a tarefa foi finalizada ou não
